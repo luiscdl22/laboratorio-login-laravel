@@ -1,58 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laboratorio #2 - Implementación de Login en Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Introducción
+En este proyecto veremos la implementación de un sistema de autenticación (Login y Registro) utilizando el framework Laravel 11. Se explora la arquitectura Modelo-Vista-Controlador (MVC), la gestión de dependencias con Composer, el manejo de front-end con Vite y la interacción con bases de datos mediante WampServer.
 
-## About Laravel
+## 2. Requisitos Previos
+Para la ejecución de este laboratorio se configuró el siguiente entorno:
+- **Sistema Operativo:** Windows 11
+- **Servidor Local:** WampServer (Apache 2.4.65, MySQL 8.4.7)
+- **Lenguaje:** PHP 8.3.28
+- **Gestor de Dependencias:** Composer 2.9.5
+- **Editor de Código:** Visual Studio Code
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 3. Instalación Implementada
+1. **Creación del proyecto:** `laravel new primer-proyecto`
+2. **Instalación de Laravel UI:** `composer require laravel/ui`
+3. **Configuración de autenticación:** `php artisan ui bootstrap --auth`
+4. **Compilación de assets:** `npm install` y `npm run dev`
+5. **Ejecución de migraciones:** `php artisan migrate`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 4. Dificultades y Soluciones
+- **Dificultad:** Visualización desordenada y estilos rotos en la página de bienvenida por conflicto entre Tailwind y Bootstrap al instalar Laravel UI.
+- **Solución:** Se realizó una limpieza del código en `welcome.blade.php` eliminando estilos residuales y se configuró la vinculación de recursos mediante la directiva `@vite(['resources/sass/app.scss', 'resources/js/app.js'])` para asegurar la carga correcta de Bootstrap.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 5. Resultados Obtenidos (Evidencias)
+Aquí se muestra el funcionamiento del flujo MVC en el sistema:
 
-## Learning Laravel
+- **Pantalla de Inicio:**
+![Inicio](./evidencias/Inicio.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Formulario de Registro:**
+![Registro](./evidencias/Registro.png)
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Login:**
+![Login](./evidencias/Login.png)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- **Dashboard:**
+![Dashboard](./evidencias/Dashboard.png)
 
-## Agentic Development
+- **Base de Datos (Tabla Users):**
+![BaseDeDatos](./evidencias/BaseDeDatos.png)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 6. Referencias de Ayuda
+- [Documentación oficial de Laravel](https://laravel.com/docs/11.x/authentication)
 
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 7. Desarrollador
+- **Nombre:** Luis De León
+- **Curso:** Desarrollo de Software VII
+- **Profesora:** Irina Fong
+- **Fecha:** 15 de abril de 2026
