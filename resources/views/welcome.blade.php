@@ -6,11 +6,9 @@
 
         <title>Laravel - Mi Primer Proyecto</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://bunny.net">
-        <link href="https://bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-        <!-- Importante: Aquí cargamos Bootstrap mediante Vite -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
         <style>
@@ -46,7 +44,8 @@
     </head>
     <body>
         <div class="container">
-            <img src="https://laravel.com" alt="Laravel Logo" width="100">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel Logo" width="120">
+            
             <h1 class="mt-4">Bienvenido a Laravel</h1>
             <p class="text-muted">Tu sistema de autenticación está listo.</p>
 
